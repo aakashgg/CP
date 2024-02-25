@@ -1,0 +1,60 @@
+Union find... some objects and want to group them 
+
+1) union - ip-2 elements   ..... output joins two elements in same group
+
+
+2)find-- tells the group to which particular element belong
+
+
+
+(Representative)0     5                6-----------7
+             /       /                 / 
+            /       /                  /
+           4-------3                   8   
+
+
+           find(4)-- returns 0        find(8)-- returns 6
+
+
+
+
+
+
+
+           union(5,7)---combines both of them
+
+
+           we need to keep track of there parent and the job is done
+IMPLEMENTATION
+
+parent[i]=i;     -initial configuration
+
+function find(x){
+//need to travel upwards towards the main guy till its the parent of itself and if so return its
+if(parent[x]!=x){
+  parent[x]=  find(parent[x]);
+
+
+    return x;
+}
+
+//union operation
+
+// find the absolute parent and combine one with another
+function union(x,y){
+    y ka absolute parent be like-- mera to koi parent nhi hai me to baap hu sabka
+    parent[find(y)]=find(x);
+    nahhhh y ke absolute parent ka bhi abse ek parent hoga which is x ka sabse bada baap 
+}
+}
+
+// complexity O(logn)
+
+ sc - O(n)
+
+
+-----------------------------------------------------------------------------------------
+Path compression
+setting the current nodes parent to root directly so when next time things are done
+we take constant time
+           

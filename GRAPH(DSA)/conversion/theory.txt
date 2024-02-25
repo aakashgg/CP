@@ -1,0 +1,9 @@
+// Given format (2d array with edges and weight (u,v,w))
+format needed Adj list 
+
+adj ke 0 index pe vo node honge jinke sath vo connected hai along with weight
+
+
+// 2 d array hogi  n*n size ki
+
+// i,j ==1 put a node called j at i place in adj list

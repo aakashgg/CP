@@ -1,8 +1,6 @@
 package cycle;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class DirectedBfs {
     public boolean kahncycle(List<List<Integer>> adj) {
